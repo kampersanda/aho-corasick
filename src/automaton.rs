@@ -485,6 +485,8 @@ pub trait Automaton {
         }
 
         let match_count = self.match_count(*state_id);
+        #[cfg(feature = "no-suffix")]
+        let match_count = match_count.min(1);
         if *match_index < match_count {
             // This is guaranteed to return a match since
             // match_index < match_count.

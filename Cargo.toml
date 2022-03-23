@@ -24,6 +24,7 @@ name = "aho_corasick"
 [features]
 default = ["std"]
 std = ["memchr/std"]
+no-suffix = []
 
 [dependencies]
 memchr = { version = "2.4.0", default-features = false }
